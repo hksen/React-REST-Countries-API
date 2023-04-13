@@ -14,7 +14,7 @@ const Countries = ({ searchQuery, selectedRegion, countries, setCountries, isDar
             country.borders.map((border) =>
               axios.get(`https://restcountries.com/v2/alpha/${border}`)
                 .then(response => {
-                  return response.data; // Return response.data instead of response
+                  return response.data; 
                 })
             )
           );
