@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-REST-Countries-API/static/css/main.bccbbe26.css",
+    "main.js": "/React-REST-Countries-API/static/js/main.f78a8042.js",
+    "static/js/787.6ec67a20.chunk.js": "/React-REST-Countries-API/static/js/787.6ec67a20.chunk.js",
+    "index.html": "/React-REST-Countries-API/index.html",
+    "main.bccbbe26.css.map": "/React-REST-Countries-API/static/css/main.bccbbe26.css.map",
+    "main.f78a8042.js.map": "/React-REST-Countries-API/static/js/main.f78a8042.js.map",
+    "787.6ec67a20.chunk.js.map": "/React-REST-Countries-API/static/js/787.6ec67a20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bccbbe26.css",
+    "static/js/main.f78a8042.js"
+  ]
+}
