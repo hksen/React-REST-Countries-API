@@ -19,7 +19,7 @@ const Countries = ({ searchQuery, selectedRegion, countries, setCountries, isDar
             )
           );
           borderNames = borders.map((border) => {
-            return border.name.replace(/\s*\([^)]*\)/, ''); // Use a regular expression to remove text inside parentheses
+            return border.name.replace(/\s*\([^)]*\)/, ''); 
           });
           borderNames = Array.from(new Set(borderNames)); 
         }
