@@ -95,7 +95,7 @@ ul {
 }
 
 .border-wrapper ul {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .filter-wrapper {
@@ -135,7 +135,6 @@ img {
   object-fit: cover;
   cursor: pointer;
   aspect-ratio: 2/1.2;
-  border-radius: 9px 9px 0px 0px;
 }
 
 /*main {
@@ -246,11 +245,14 @@ img {
   padding: 0px 80px;
 }
 
+.countries ul li img {
+  border-radius: 9px 9px 0px 0px;
+}
+
 .country-flag img {
   width: 100%;
   height: 100%;
   aspect-ratio: 1.3875;
-  border-radius: 9px;
 }
 
 .country-flag {
@@ -320,9 +322,8 @@ img {
 }
 
 .border-wrapper li {
-  max-width: 96px;
+  min-width: 96px;
   height: 30px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,6 +359,14 @@ img {
   .second-infos {
     margin-top: 35px;
   }
+
+  .border-wrapper {
+    flex-direction: column;
+  }
+
+  .border-wrapper ul {
+    grid-template-columns: repeat(4, 1fr);
+}
 }
 
 @media screen and (max-width: 970px){
@@ -422,14 +431,21 @@ img {
   }
 
   .border-wrapper li {
-    max-width: unset;
     height: 55px;
+    min-width: unset;
     font-size: 1.5em;
+    width: 100%;
   }
 
   .border-name {
     padding-top: 75px;
   }
+}
+
+@media screen and (max-width:1024px){
+  .border-wrapper ul {
+    grid-template-columns: repeat(3, 1fr);
+}
 }
 
 @media screen and (max-width:850px){
@@ -471,12 +487,12 @@ img {
   }
 
   .country-info h4 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: 20px;
   }
 
   .country-info p {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 10px;
   }
 
@@ -570,4 +586,14 @@ img {
 }
 
 
+}
+
+@media screen and (min-width: 2560px){
+  .countries ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .border-wrapper ul {
+    display: flex;
+  }
 }

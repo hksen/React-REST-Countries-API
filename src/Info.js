@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import axios from "axios";
 
 function Infos({ country, handleBorderClick, setPage, setSearchQuery, isDarkMode }) {
 
@@ -37,6 +36,20 @@ function Infos({ country, handleBorderClick, setPage, setSearchQuery, isDarkMode
                         <p><span className="bold">Languages: </span><span className="opacitym">{country.languages ? Object.values(country.languages).map(language => language).join(", ") : ""}</span></p>
                     </div>
             </div>
+                <div className="border-name">
+                    {country.borders.length > 0 ? (
+                    <div className="border-wrapper">
+                        <p>Border Countries:</p>
+                        <ul>
+                        {country.borders.map((border, index) => (
+                            <li key={index} className={` ${isDarkMode ? "dark-theme dark-color" : "light-theme light-shadow light-color"}`} onClick={() => handleBorderClick(border)}>{border}</li>
+                        ))}
+                        </ul>
+                    </div>
+                    ) : (
+                    <p>This country has no land borders.</p>
+                    )}
+                </div>
             </div>
         </div>
     </div>

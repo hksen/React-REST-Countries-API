@@ -1,8 +1,7 @@
-import react, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Main from './Main';
 import Infos from './Info';
-import axios from "axios";
 import Countries from './Countries';
 
 function App() {
@@ -32,16 +31,24 @@ function App() {
   }
 
   const handleBorderClick = (border) => {
+    console.log(border);
     const filtered = countries.filter((country) =>
       country.name.toLowerCase().includes(border.toLowerCase())
     );
-    setSelectedCountry(filtered[0]);  
+    console.log(filtered)
+    if(filtered.length > 0 )
+    {
+      setSelectedCountry(filtered[0]);  
+    }
+
   }
 
 
 const Filter = (regions) => {
-  setSelectedRegion(regions); 
+  setSelectedRegion(regions);
+
 }
+
 
 const Suggestions = () => {
   return (
@@ -77,7 +84,7 @@ const Suggestions = () => {
         {pages === 0 ? (
             <>
               <Main Suggestions={Suggestions} setSearchQuery={setSearchQuery} isDarkMode={isDarkMode}/>
-              <Countries isDarkMode={isDarkMode} handleCountryClick={handleCountryClick} />
+              <Countries searchQuery={searchQuery} selectedRegion={selectedRegion} countries={countries} setCountries={setCountries} isDarkMode={isDarkMode} handleCountryClick={handleCountryClick} />
             </>
           ) : (
             <Infos country={selectedCountry} handleBorderClick={handleBorderClick} setPage={setPage} setSearchQuery={setSearchQuery} isDarkMode={isDarkMode}/>
